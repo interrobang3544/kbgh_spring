@@ -1,5 +1,6 @@
 package com.interrobang.kbgh.lotto;
 
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -8,11 +9,19 @@ import org.springframework.stereotype.Service;
 public class LottoService {
     private final LottoRepository lottoRepository;
 
-    public String getCurrentRound() {
-        return lottoRepository.getCurrentRound();
+    public String getCurrentDrwNo() {
+        return lottoRepository.getCurrentDrwNo();
     }
 
-    public Lotto getLotto(String round) {
-        return lottoRepository.getLotto(round);
+    @Transactional
+    public Lotto getLotto(String drwNo) {
+        Lotto existLotto = lottoRepository.findLotto(drwNo);
+        if (existLotto == null) {
+            Lotto lotto = lottoRepository.getLotto(drwNo);
+            lottoRepository.save(lotto);
+            return lotto;
+        } else {
+            return existLotto;
+        }
     }
 }

@@ -17,8 +17,8 @@ public class LottoController {
 
     @ResponseBody
     @GetMapping("lotto_current_round")
-    public String getCurrentRound() {
-        return lottoService.getCurrentRound();
+    public String getCurrentDrwNo() {
+        return lottoService.getCurrentDrwNo();
     }
 
     @ResponseBody
