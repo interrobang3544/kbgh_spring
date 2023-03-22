@@ -1,0 +1,177 @@
+#lotto {
+    width: 100%;
+    max-width: 800px;
+    min-height: 800px;
+    margin: auto;
+}
+
+.banner {
+    height: 99px;
+    display: flex;
+    justify-content: center;
+    margin: 20px 20px;
+}
+
+.lotto_icon {
+    text-align: center;
+}
+
+#lotto_icon {
+    height: 140px;
+}
+
+.title {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.title-name {
+    height: 30px;
+    line-height: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px 0;
+}
+
+.form {
+    height: 69px;
+}
+
+.user-input {
+    margin: 0px;
+}
+
+.form-input {
+    text-align: center;
+    margin: 5px;
+}
+
+.retry-btn {
+    height: 35px;
+    line-height: 35px;
+    margin: 5px 0;
+    padding: 0 15px;
+}
+
+.result {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.ball {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    margin: 5px 10px;
+    border-radius: 100%;
+    font-size: 28px;
+    font-weight: 500;
+    color: rgb(255 255 255);
+    text-shadow: 0px 0px 3px rgb(73 57 0 / 80%);
+}
+
+.info-box {
+    display: flex;
+    margin: 4px 0;
+}
+
+.info-title {
+    height: 25px;
+    width: 120px;
+    margin-right: 10px;
+    line-height: 25px;
+    border-radius: 12px;
+    background-color: #40444f;
+    text-align: center;
+    color: white;
+}
+
+.picked-box {
+    border-radius: 12px;
+    border: 2px solid #40444f;
+    margin-top: 10px;
+}
+
+.picked-title {
+    text-align: center;
+    margin-top: 10px;
+}
+
+@media only screen and (max-width: 540px) {
+    .ball {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size:18px;
+        margin: 5px 2px;
+    }
+}
+
+.hide {
+    display: none;
+}
+
+/* reference: https://velog.io/@henotony/CSS%EB%A7%8C%EC%9C%BC%EB%A1%9C-Tab%EC%A0%84%ED%99%98%EC%8B%9C%ED%82%A4%EB%8A%94-%EB%B0%A9%EB%B2%95 */
+
+/* 탭 전체 스타일 */
+.tabs {
+    margin-top: 50px;
+    padding-bottom: 40px;
+    background-color: #333333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;}
+
+/* 탭 스타일 */
+.tab_item {
+    width: calc(100%/3);
+    height: 50px;
+    border-bottom: 3px solid #f8f8f8;
+    background-color: #333333;
+    line-height: 50px;
+    font-size: 16px;
+    text-align: center;
+    color: #f8f8f8;
+    display: block;
+    float: left;
+    text-align: center;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+.tab_item:hover {
+    opacity: 0.75;
+}
+
+/* 라디오 버튼 UI삭제*/
+input[name="tab_item"] {
+    display: none;
+}
+
+/* 탭 컨텐츠 스타일 */
+.tab_content {
+    display: none;
+    height: 1000px;
+    padding: 10px 10px 0;
+    color: #ffffff;
+    clear: both;
+    overflow: auto;
+}
+
+/* 선택 된 탭 콘텐츠를 표시 */
+#generate:checked ~ #generate_content,
+#record:checked ~ #record_content,
+#statistic:checked ~ #statistic_content {
+    display: block;
+}
+
+/* 선택된 탭 스타일 */
+.tabs input:checked + .tab_item {
+    background-color: #ffffff;
+    color: #333333;
+}

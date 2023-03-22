@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+    <link href="./css/reset.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/lotto.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <title>로또</title>
+</head>
+<body>
+<div class="main">
+    <div class="lotto_icon">
+        <img id="lotto_icon" src="./image/lotto_main_remove_background.png">
+    </div>
+    <div class="tabs">
+        <input id="generate" type="radio" name="tab_item" checked>
+        <label class="tab_item" for="generate">번호 생성</label>
+        <input id="record" type="radio" name="tab_item">
+        <label class="tab_item" for="record">결과 조회</label>
+        <input id="statistic" type="radio" name="tab_item">
+        <label class="tab_item" for="statistic">통계</label>
+
+        <div class="tab_content" id="generate_content">
+            <div class="banner">
+                <div class="title">
+                    <div>
+                        <div class="title-name">로또 번호 자동 생성기</div>
+                        <form class="form generate-form">
+                            <input class="form-input generate-input" type="number" min="1" max="500" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" placeholder="생성할 횟수를 입력하세요" style="width: 200px"/>
+                        </form>
+                        <div class="generate-user-input hide"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="contents">
+                <div class="result-list result" id="result">
+                </div>
+            </div>
+        </div>
+
+        <div class="tab_content" id="record_content">
+            <div class="banner">
+                <div class="title">
+                    <div>
+                        <div class="title-name">로또 회차별 당첨 결과 조회</div>
+                        <form class="form record-form">
+                            <input class="form-input record-input" id="input-round" type="number" min="1" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" placeholder="조회하실 회차를 입력하세요" style="width: 200px"/>
+                            <div id="current-round"></div>
+                        </form>
+                        <div class="record-user-input hide"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="contents">
+                <div id="result-record">
+                </div>
+            </div>
+        </div>
+
+        <div class="tab_content" id="statistic_content">
+            미구현 기능입니다.
+        </div>
+
+    </div>
+</div>
+<script src="./js/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+<script src="./js/lotto.js"></script>
+</body>
+</html>
