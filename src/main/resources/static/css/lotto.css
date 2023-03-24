@@ -7,8 +7,6 @@
 
 .banner {
     height: 99px;
-    display: flex;
-    justify-content: center;
     margin: 20px 20px;
 }
 
@@ -22,8 +20,6 @@
 
 .title {
     height: 80px;
-    display: flex;
-    align-items: center;
     text-align: center;
 }
 
@@ -32,7 +28,18 @@
     line-height: 30px;
     font-size: 20px;
     font-weight: bold;
-    margin-bottom: 5px 0;
+    margin-bottom: 5px;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    float: left;
+    font-size: 14px;
+}
+
+#flexCheckDefault {
+    margin-right: 5px;
 }
 
 .form {
@@ -40,7 +47,7 @@
 }
 
 .user-input {
-    margin: 0px;
+    margin: 0;
 }
 
 .form-input {

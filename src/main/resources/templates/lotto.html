@@ -51,12 +51,27 @@
             <div class="banner">
                 <div class="title">
                     <div>
-                        <div class="title-name">로또 회차별 당첨 결과 조회</div>
+                        <div class="row">
+                            <div class="col-3"></div>
+                            <div class="col-6 title-name">로또 회차별 당첨 결과 조회</div>
+                            <div class="col-3 checkbox-container">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    다중 검색
+                                </label>
+                            </div>
+                        </div>
                         <form class="form record-form">
-                            <input class="form-input record-input" id="input-round" type="number" min="1" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" placeholder="조회할 회차를 입력하세요" style="width: 200px"/>
+                            <input class="form-input record-input" id="input-round" type="number" min="1" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" placeholder="조회할 회차를 입력하세요"/>
                             <div id="current-round"></div>
                         </form>
                         <div class="record-user-input hide"></div>
+                        <form class="form record-form">
+                            <input class="form-input record-input hide" id="input-round-start" type="number" min="1" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" placeholder="시작 회차를 입력하세요"/>
+                            <div> ~ </div>
+                            <input class="form-input record-input hide" id="input-round-end" type="number" min="1" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" placeholder="마지막 회차를 입력하세요"/>
+                            <div class="hide" id="current-round2"></div>
+                        </form>
                     </div>
                 </div>
             </div>
